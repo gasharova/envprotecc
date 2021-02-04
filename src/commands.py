@@ -7,11 +7,6 @@ def protecc():
     pass
 
 @protecc.command()
-def hello():
-    """Example script."""
-    click.echo('Hello World!')
-
-@protecc.command()
 @click.option("--config-path", default="./config", show_default=True, type=click.Path())
 def init(config_path):
     """
