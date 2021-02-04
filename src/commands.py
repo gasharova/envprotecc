@@ -17,13 +17,10 @@ def init(config_path):
     """
     Initializes the project folder with .pysa and taint.config files
     """
-    if os.path.isdir(config_path):
-        click.echo("Configuration already exists")
-        return
     click.echo("Initializing...")
-    os.mkdir(config_path)
+    if not os.path.isdir(config_path):
+        os.mkdir(config_path)
     model_path = os.path.join(config_path, "models.pysa")
-    print(model_path)
     if os.path.isfile(model_path):
         click.echo("models.pysa already exists...")
     else:
@@ -37,4 +34,4 @@ def init(config_path):
         with open(taint_config_path, 'w') as fp:
             pass
         click.echo("Create taint.config file...")
-    click.echo(f"Configuration files generated at {config_path}")
+    click.echo(f"Configuration files generated at '{config_path}'")
