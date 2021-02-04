@@ -1,6 +1,39 @@
 import click
 import subprocess
 import os
+import json
+
+taint_content = {
+    "sources": [
+        {
+            "name": "Secret",
+            "comment": "Environment secrets"
+        }
+    ],
+    "sinks": [
+        {
+            "name": "Endpoint",
+            "comment": "Registered API Endpoints"
+        }
+    ],
+    "rules": [
+        {
+          "name": "Possible env var leakage",
+          "code": 69,
+          "sources": [ "Secret" ],
+          "sinks": [ "Endpoint" ],
+          "message_format": "Environment variables and data may leak from API Endpoints"
+        }
+    ]
+}
+
+model_content = """
+django.http.request.HttpRequest.GET: TaintSource[Secret] = ...
+
+def eval(__source: TaintSink[Endpoint], __globals, __locals): ...
+
+def subprocess.getoutput(cmd: TaintSink[Endpoint]): ...
+"""
 
 @click.group()
 def protecc():
@@ -16,17 +49,12 @@ def init(config_path):
     if not os.path.isdir(config_path):
         os.mkdir(config_path)
     model_path = os.path.join(config_path, "models.pysa")
-    if os.path.isfile(model_path):
-        click.echo("models.pysa already exists...")
-    else:
-        with open(model_path, 'w') as fp:
-            pass
-        click.echo("Created models.pysa file...")
+    with open(model_path, 'w') as fp:
+        fp.write(model_content)
+    click.echo("Created models.pysa file...")
     taint_config_path = os.path.join(config_path, 'taint.config')
-    if os.path.isfile(taint_config_path):
-        click.echo("taint.config already exists...")
-    else:
-        with open(taint_config_path, 'w') as fp:
-            pass
-        click.echo("Create taint.config file...")
+    with open(taint_config_path, 'w') as fp:
+        content = json.dumps(taint_content, indent=2)
+        fp.write(content)
+    click.echo("Create taint.config file...")
     click.echo(f"Configuration files generated at '{config_path}'")
