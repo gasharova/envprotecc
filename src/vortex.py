@@ -5,7 +5,7 @@ import yaml
 class Vortex:
     def __init__(self):
         self.SECRETS = {}   # Populate with sources
-        self.endpoints = {}  # Populate with sinks
+        self.endpoints = set() # Populate with sinks
 
     def get_yml(self, yml_path):
         '''
@@ -28,3 +28,20 @@ class Vortex:
         except:
             print(".env file not found in specified location.")
 
+    def register_endpoint(self, func):
+        '''
+        Registers an endpoint method to track the data flowing through its response.
+        Usage example - 
+        ```python
+        @app.GET
+        @vortex.register_endpoint
+        def response_function(...):
+            ...
+        ```
+        '''
+        def register(*args, **kwargs):
+            out = func(*args, **kwargs)
+            self.endpoints.add(out)
+            return out
+
+        return register
