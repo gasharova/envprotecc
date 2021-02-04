@@ -1,5 +1,4 @@
-from dotenv import find_dotenv
-import os
+from dotenv import find_dotenv, dotenv_values
 
 
 class Vortex:
@@ -19,21 +18,7 @@ class Vortex:
         '''
         try:
             dotenv_path = find_dotenv()
-            dotenv_file = open(dotenv_path, 'r')
-            contents = dotenv_file.readlines()
-            for line in contents:
-                variable = line.split("=")
-                key = variable[0]
-                value = variable[1]
-                if value == 'true':
-                    value = True
-                elif value == 'false':
-                    value = False
-                else:  # TODO: Define other types parsing OR use default load_dotenv
-                    value = value.replace('\n', '')
-                    value = value.replace('"', '')
-                self.SECRETS[key] = value
-                print(self.SECRETS)
+            self.SECRETS = dotenv_values(dotenv_path)
         except:
             print(".env file not found in specified location.")
 
