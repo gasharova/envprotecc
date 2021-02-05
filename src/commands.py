@@ -28,11 +28,8 @@ taint_content = {
 }
 
 model_content = """
-django.http.request.HttpRequest.GET: TaintSource[Secret] = ...
-
-def eval(__source: TaintSink[Endpoint], __globals, __locals): ...
-
-def subprocess.getoutput(cmd: TaintSink[Endpoint]): ...
+protecc.vortex.Vortex.SECRETS: TaintSource[Secret]
+protecc.vortex.Vortex.endpoints: TaintSink[Endpoint]
 """
 
 @click.group()
