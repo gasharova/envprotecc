@@ -34,6 +34,7 @@ ptyprocess==0.7.0
 Pygments==2.7.4
 pyre-check==0.0.59
 pyre-extensions==0.0.20
+python-dotenv==0.15.0
 pywatchman==1.4.1
 PyYAML==5.4.1
 Rx==1.6.1
