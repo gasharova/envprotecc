@@ -21,7 +21,7 @@ Before submitting an issue please make sure:
 2. Clone from your repository
 
 ```bash
-    $ git clone https://github.com/your-username/repository-name
+    $ git clone https://github.com/your-username/protecc
 ```
 
 3. Create a virtual environment (always a good practice!) and install the development dependencies
