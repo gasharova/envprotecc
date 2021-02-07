@@ -11,6 +11,6 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        protecc=src.commands:protecc
+        protecc=protecc.commands:protecc
     ''',
 )
