@@ -1,0 +1,7 @@
+{
+  "source_directories": [
+    "."
+  ],
+  "taint_models_path": "./.config",
+  "search_path": "."
+}

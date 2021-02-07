@@ -1,0 +1,10 @@
+{
+  "binary": "/home/zeus/work/test-protecc/env/bin/pyre.bin",
+  "source_directories": [
+    "."
+  ],
+  "search_path": "./stubs",
+  "taint_models_path": "./.config",
+  "exclude": "*./env/.*",
+  "typeshed": "/home/zeus/work/test-protecc/env/lib/pyre_check/typeshed"
+}
