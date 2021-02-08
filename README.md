@@ -19,7 +19,7 @@ Please refer to [our CONTRIBUTING.md file](CONTRIBUTING.md).
 
 ### Installing the package
 
-Our package is publicly available on PyPi.
+Our package is publicly available on [PyPi](https://pypi.org/project/envprotecc/0.1/).
 To install using `pip`, run the command:
 
 ```bash
@@ -31,14 +31,14 @@ To install using `pip`, run the command:
 ### Init command
 
 ```bash
-    $ envprotecc init --search-path .config  # Puts the config into a folder to avoid collisions
+    $ protecc init --search-path .config  # Puts the config into a folder to avoid collisions
 ```
 
 ### Analyze command
 Runs the static analysis.
 
 ```bash
-    $ envprotecc analyze
+    $ protecc analyze
 ```
 
 ## Inspiration
@@ -67,5 +67,5 @@ We wrote an issue on Github about it ([link](https://github.com/facebook/pyre-ch
 - How to submit devpost projects :)
 
 ## What's next for EnvProtecc
-EnvProtecc is published on PyPi and is ready for use. It has no security issues and doesn't need any additional documentation apart from this one.  
+EnvProtecc is published on [PyPi](https://pypi.org/project/envprotecc/0.1/) and is ready for use. It has no security issues and doesn't need any additional documentation apart from this one.  
 It's also public on GitHub. Anyone can contribute following our contribution [rules and guidelines](CONTRIBUTING.md).
