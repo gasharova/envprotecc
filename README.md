@@ -14,7 +14,7 @@
 ## Installation
 
 ### Installing the repository for contribution purposes
-Please refer to [our CONTRIBUTION.md file](CONTRIBUTION.md).
+Please refer to [our CONTRIBUTING.md file](CONTRIBUTING.md).
 
 ### Installing the package
 
@@ -48,7 +48,8 @@ Using a few modest, but useful underlying packages, EnvProtecc is the only depen
 EnvProtecc is a Python tool which uses dataflow analysis tools to check for leakages of any of the environment variables. In case leakages are found, they're displayed at runtime after running the `analyze` command.
 
 ## How we built it
-EnvProtecc is build on `pysa`, a part of the `pyre-check` project package (see more about `pysa` [here](https://pyre-check.org/docs/pysa-running)).
+EnvProtecc is build on `pysa`, a part of the `pyre-check` project package (see more about `pysa` [here](https://pyre-check.org/docs/pysa-running)).  
+Additionally, since it's a CLI tool, we also make use of `click` (see more [here](https://click.palletsprojects.com/en/7.x/)).
 
 ## Challenges we ran into
 
