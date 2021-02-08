@@ -10,7 +10,7 @@
 - [How we built it](#how-we-built-it)
 - [Challenges we ran into](#challenges-we-ran-into)
 - [Accomplishments that we're proud of](#accomplishments-that-were-proud-of)
-- [What's next for protecc](#whats-next-for-protecc)
+- [What's next for EnvProtecc](#whats-next-for-envprotecc)
 
 ## Installation
 
@@ -58,7 +58,7 @@ We wrote an issue on Github about it ([link](https://github.com/facebook/pyre-ch
 
 ## Accomplishments that we're proud of
 #### 1. Being able to finish the project and clear the bugs even with the deadline approaching
-#### 2. Fully using the good Github practices (PRs, reviews, documentation, Kanban table)
+#### 2. Fully using the good Github practices (PRs, reviews, documentation, Kanban table, tags)
 #### 3. Already having 5 stars on github
 
 ## What we learned
@@ -67,3 +67,5 @@ We wrote an issue on Github about it ([link](https://github.com/facebook/pyre-ch
 - How to submit devpost projects :)
 
 ## What's next for EnvProtecc
+EnvProtecc is published on PyPi and is ready for use. It has no security issues and doesn't need any additional documentation apart from this one.  
+It's also public on GitHub. Anyone can contribute following our contribution rules and guidelines [rules and guidelines](CONTRIBUTING.md).
