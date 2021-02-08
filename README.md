@@ -30,21 +30,25 @@ To install using `pip`, run the command:
 #### Init command
 
 ```bash
-    $ protecc init
+    $ envprotecc init
 ```
 
 #### Analyze command
 Runs the static analysis.
 
 ```bash
-    $ protecc analyze
+    $ envprotecc analyze
 ```
 
 ## Inspiration
+We wanted to create the ultimate tool for finding environment variable leakages - and thats how EnvProtecc was born.  
+Using a few modest, but useful underlying packages, EnvProtecc is the only dependency you need for env security.
 
 ## What it does
+EnvProtecc is a Python tool which uses dataflow analysis tools to check for leakages of any of the environment variables. In case leakages are found, they're displayed at runtime after running the `analyze` command.
 
 ## How we built it
+EnvProtecc is build on `pysa`, a part of the `pyre-check` project package (see more about `pysa` [here](https://pyre-check.org/docs/pysa-running)).
 
 ## Challenges we ran into
 
