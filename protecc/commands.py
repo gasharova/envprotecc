@@ -91,3 +91,7 @@ def init(config_path):
         fp.write(content)
     click.echo("Create taint.config file...")
     click.echo(f"Configuration files generated at '{config_path}'")
+
+@protecc.command()
+def analyze():
+    os.system("pyre analyze")
