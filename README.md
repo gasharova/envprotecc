@@ -68,4 +68,4 @@ We wrote an issue on Github about it ([link](https://github.com/facebook/pyre-ch
 
 ## What's next for EnvProtecc
 EnvProtecc is published on PyPi and is ready for use. It has no security issues and doesn't need any additional documentation apart from this one.  
-It's also public on GitHub. Anyone can contribute following our contribution rules and guidelines [rules and guidelines](CONTRIBUTING.md).
+It's also public on GitHub. Anyone can contribute following our contribution [rules and guidelines](CONTRIBUTING.md).
