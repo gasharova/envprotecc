@@ -31,7 +31,7 @@ To install using `pip`, run the command:
 ### Init command
 
 ```bash
-    $ envprotecc init
+    $ envprotecc init --search-path .config  # Puts the config into a folder to avoid collisions
 ```
 
 ### Analyze command
