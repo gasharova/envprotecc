@@ -18,23 +18,27 @@ Please refer to [our CONTRIBUTION.md file](CONTRIBUTION.md).
 
 ### Installing the package
 
-1. Install the package via pip or another package manager
+Our package is publicly available on PyPi.
+To install using `pip`, run the command:
 
 ```bash
-    $ pip install ???
+    $ pip install envprotecc
 ```
-
-2. ???
 
 ## Usage
 
-1. Init command
+#### Init command
 
 ```bash
-    $ ??? init
+    $ protecc init
 ```
 
-2. ???
+#### Analyze command
+Runs the static analysis.
+
+```bash
+    $ protecc analyze
+```
 
 ## Inspiration
 
