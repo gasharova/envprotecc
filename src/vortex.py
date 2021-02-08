@@ -41,7 +41,11 @@ class Vortex:
         '''
         def register(*args, **kwargs):
             out = func(*args, **kwargs)
-            self.endpoints.add(out)
+            for arg in args:
+                self.taint_arg(arg)
             return out
 
         return register
+
+    def taint_arg(self, arg):
+        return arg
